@@ -1,0 +1,61 @@
+    body{
+       margin: auto;
+       width:100%;
+       font-size: 50px;
+
+        color: yellow;
+  text-shadow:  -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000,
+                0px 0px 0 #000,
+                0px 1px 0 #000,
+                1px 0px 0 #000,
+                1px 1px 0 #000;
+  
+
+    }
+
+    img{
+
+        display: block;
+        border-style: solid;
+  border-width: thin;
+        
+    }
+
+    .label{
+        text-align:center;
+        padding-top: 10px;
+        width:100%;
+        color:blue;
+        font-size: 30px;
+        display:block;
+
+        page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+        page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+        page-break-inside: avoid; /* or 'auto' */
+    }
+
+    h1{
+        page-break-before: always;
+        page-break-after: always;
+        background-color:red;
+        height: 460px;
+        color:white;
+    }
+
+
+    .readable{
+  color: yellow;
+  text-shadow:  -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000,
+                0px 0px 0 #000,
+                0px 1px 0 #000,
+                1px 0px 0 #000,
+                1px 1px 0 #000;
+  font-size: 40px;
+
+}
