@@ -8,6 +8,7 @@ var text = `<?php
                 $password = "";
                 $dbname = "slideshow";
 
+                //$video =$_GET['video'];
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,7 +17,7 @@ var text = `<?php
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "SELECT imageID,task FROM $dbname where video='01-01' ";
+                $sql = "SELECT imageID,task FROM $dbname where video='04-05' ";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {

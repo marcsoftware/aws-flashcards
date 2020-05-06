@@ -43,3 +43,12 @@ function nextSlide(){
     draw();
     document.title=count+'/'+total;
 }
+
+function prevSlide(){
+    count--;
+    if(count==total){
+        alert('you won');
+    }
+    draw();
+    document.title=count+'/'+total;
+}
