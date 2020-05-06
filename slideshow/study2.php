@@ -28,7 +28,7 @@ var text = `<?php
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "SELECT imageID,task FROM $dbname where video='$video' ";
+                $sql = "SELECT imageID,task FROM $dbname where video='$video' and task!='' ";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
