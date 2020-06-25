@@ -2,7 +2,7 @@
 
 <meta charset="UTF-8">
 
-<link rel="stylesheet" type="text/css" href="master.css">
+<link rel="stylesheet" type="text/css" href="editMode.css">
 <html>
 
 
@@ -29,13 +29,19 @@ var text = `<?php
                 }
 
                 //$sql = "SELECT imageID,task FROM $dbname where video='$video' and task!='' ";
-                $sql = "SELECT imageID,task FROM $dbname where video='$video'  ";
+                $sql = "SELECT id,imageID,task FROM $dbname where video='$video'  ";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
                     // output data of each row
+
                     while($row = $result->fetch_assoc()) {
-                        echo "" . $row["imageID"]. " " . $row["task"].  "<br>";
+                        $id=$row["id"];
+                        $imageID=$row["imageID"];
+                        $task=$row["task"];
+
+                        $image="<img src='aws/{$imageID}' />";
+                        echo "<tr> <th>{$id}</th><th> {$image}</th><th><textarea onchange='update(\"{$id}\",this)'> {$task}</textarea><br></tr>";
                     }
                 } else {
                     echo "0 results";
@@ -58,10 +64,15 @@ var text = `<?php
 
 
 </script>
-<script type="text/javascript" src="study2.js"></script>
+<script type="text/javascript" src="editMode.js"></script>
 <body>
 
-<pre id='output'></pre>
-<input type='button' onclick='prevSlide()' value='<<<<<<<<<<<<<<<<<<'/>
+
+
+<table id='output' class="greenTable">
+ 
+
+</table>
+
 </body>
 </html> 
