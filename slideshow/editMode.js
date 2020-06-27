@@ -37,9 +37,9 @@ function draw(){
 }
 
 function update(id,handle){
-    var task =handle.value;
+    var task =handle.value; 
     handle.style["background-color"] = "Azure"; 
-    handle.style["color"] = "Black"; 
+    handle.style["color"] = "Black";  
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -55,14 +55,14 @@ function update(id,handle){
 
 }
 
-function handlePaste(e){
-    alert(e.target.value);
+function handlePaste(e,id){
+    getBlobFromClipboard(e,id);
 }
 
-// window.addEventListener('paste', ... or
-document.onpaste = function(event){
+// id is the id of the html element to redner the picture at.
+ function getBlobFromClipboard(event,id){
   var items = (event.clipboardData || event.originalEvent.clipboardData).items;
-
+ var template= ` <img src="PATH" > `
   console.log(JSON.stringify(items)); // will give you the mime types
   for (index in items) {
     var item = items[index];
@@ -71,7 +71,7 @@ document.onpaste = function(event){
       var reader = new FileReader();
       reader.onload = function(event){
         console.log(event.target.result)}; // data url!
-
+        document.getElementById(id).innerHTML=template.replace(/PATH/g,blob);
         reader.readAsDataURL(blob);
 
     }

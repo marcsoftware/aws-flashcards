@@ -41,7 +41,7 @@ var text = `<?php
                         $task=$row["task"];
 
                         $image="<img src='aws/{$imageID}' />";
-                        echo "<tr> <th>{$id}</th><th> {$image}</th><th><textarea onchange='update(\"{$id}\",this)' onpaste='handlePaste(event)' > {$task}</textarea><br></tr>";
+                        echo "<tr> <th><p id='{$id}'>{$id}</th><th> {$image}</th><th><textarea onchange='update(\"{$id}\",this)' onpaste='handlePaste(event,\"{$id}\")' > {$task}</textarea><br></tr>";
                     }
                 } else {
                     echo "0 results";
