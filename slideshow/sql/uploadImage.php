@@ -10,15 +10,15 @@
                 $dbname = "slideshow";
 
 
-                echo $_POST["video"];
+                
                 echo $_POST["imageID"];
-                echo $_POST["task"];
+                
 
-                $video= $_POST["video"];
+                
                 $imageID=$_POST["imageID"];
-                $task=$_POST["task"]; 
+                
 
-$sql = "INSERT INTO slideshow VALUES (null,'11','21','31') ";
+
 
                 
 
@@ -98,7 +98,9 @@ $sql = "INSERT INTO slideshow VALUES (null,'11','21','31') ";
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "INSERT INTO slideshow VALUES (null,'$video','$task','$imageID',null) "; 
+                //$sql = "update  $dbname set task='$task' where id='$id'  ";
+                //$sql = "update slideshow set VALUES (null,'$video','$task','$imageID',null) "; 
+                $sql = "update slideshow set imageID='$imageID' where id='$id'  "; 
                 $result = $conn->query($sql);
 
                 $conn->close();
