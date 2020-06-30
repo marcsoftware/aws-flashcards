@@ -11,12 +11,15 @@
 
 
                 
+
                 echo $_POST["imageID"];
                 
 
                 
                 $imageID=$_POST["imageID"];
-                
+
+                                
+                $id=$_POST["id"];
 
 
 
@@ -27,7 +30,9 @@
                             $image  = $_FILES["image"];
                             $code   = (int)$image["error"];
                             $valid  = array( IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF );
-                            $folder = dirname( __FILE__ )."/slideshow/aws/"; // path to folder to where you want to move uploaded file
+                            $folder = "C:\\xamppNEW\htdocs\slideshowBackend/slideshow/aws/"; // path to folder to where you want to move uploaded file
+                            echo "folder: ".$folder;
+                            
                             $target = $folder.$image["name"];
 
                             if ( !file_exists( $folder ) ) {
@@ -79,7 +84,7 @@
                               }
                             }
                             if ( empty( $error ) ) {
-                              echo json_encode( array( "error" => 0, "message" => "Upload success!" ) );
+                              echo json_encode( array( "error" => 0, "message" => "Upload success! (85)" ) );
                             }
                             else {
                               echo json_encode( array( "error" => 1, "message" => $error ) );
