@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+
+<script>
+
+    window.onload=init;
+
+//--------------------------------------------------------------------------------------
+//
+//--------------------------------------------------------------------------------------
+function init() {
+  print('marc','test');
+}
+
+//--------------------------------------------------------------------------------------
+//
+//--------------------------------------------------------------------------------------
+function print(x,y='') {
+    var template = `${x}`;
+    var template=`<a href="http://localhost/slideshowBackend/slideshow/study2.php?video=${x}">${x}</a>  ${y} [35min]<br/>`;
+        document.getElementById('output').innerHTML=template;
+  
+}
+</script>
+
+<body>
+
+<div id='output'>out</div>
+
+
+
+
+
+
+
+</body>
+</html> 
+
+
+<html>
+
+<body>
+x
+</body>
+</html>
