@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 //                                    id video task imageid
 $sql = "INSERT INTO slideshow VALUES (null,'$video',' ','0',null) ";
 echo $sql;
-for ($x = 0; $x <= 10; $x++) {
+for ($x = 0; $x <= 200; $x++) {
   $result = $conn->query($sql);
 } 
 

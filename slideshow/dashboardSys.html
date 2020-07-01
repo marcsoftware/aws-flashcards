@@ -48,7 +48,7 @@ function init() {
 function print(x,y='') {
     x=x.trim();
     var template = `${x}`;
-    var template=`<a href="http://localhost/slideshowBackend/slideshow/study2.php?video=${x}">${x}</a>  ${y} [35min]<br/>`;
+    var template=`<a href="http://localhost/slideshowBackend/slideshow/editMode.php?video=${x}">${x}</a>  ${y} [35min]<br/>`;
         document.getElementById('output').innerHTML+=template;
   
 }
@@ -56,7 +56,7 @@ function print(x,y='') {
 
 <body>
 
-<div id='output'>out</div>
+<div id='output'></div>
 
 
 
