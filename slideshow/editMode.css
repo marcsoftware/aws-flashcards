@@ -7,8 +7,9 @@ th{
 
 textarea{
     
-    width:100%;
+    width:50%;
     color:red;
+    height:100%;
 }
 
 img{
@@ -16,5 +17,7 @@ img{
 }
 
 
-
+.small{
+        width:10%;
+}
 

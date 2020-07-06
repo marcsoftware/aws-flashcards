@@ -58,7 +58,7 @@ function update(id,handle){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
            // Typical action to be performed when the document is ready:
-           alert(xhttp.responseText);
+           //alert(xhttp.responseText);
         }
     };
     xhttp.open("GET", "sql/update.php?id="+id+"&task="+task, true);
