@@ -10,23 +10,13 @@
 //
 //--------------------------------------------------------------------------------------
 function init() {
-  
+   print("devnotes01","IAM");
+  print("devnotes02","EC2");
 
+document.getElementById('output').innerHTML+='<hr>';
+  read("devnotes01","IAM");
+  read("devnotes02","EC2");
 
-  print("sys04","       🟠   11.04 ]  04. Essentials Hands On - CloudWatch.mp4");
-
-  print("sys08","       🟠   19.47 ]  08. Essentials Lab Session 1 - Advanced VPC.mp4");
-  print("sys09 ","      🟡   09.06 ]  09. Essentials Lab Session 2 - Advanced VPC.mp4");
-  
-
-
-  print("sys32 ","      🟥   08.45 ]  32. Hands On - Troubleshooting EC2.mp4");
-
-  print("sys34","       🟥   14.10 ]  34. Hands On - Troubleshooting RDS.mp4");
-
-  print("sys36 ","      🟥   13.22 ]  36. Lab - Implementing EC2 Monitoring Scripts.mp4");
-
-  print("sys38 ","      🟥   07.45 ]  38. Hands On - Monitoring RDS.mp4");
 
 }
 
@@ -37,6 +27,16 @@ function print(x,y='') {
     x=x.trim();
     var template = `${x}`;
     var template=`<a href="http://localhost/slideshowBackend/slideshow/editMode.php?video=${x}">${x}</a>  ${y} <br/>`;
+        document.getElementById('output').innerHTML+=template;
+  
+}
+
+
+
+function read(x,y='') {
+    x=x.trim();
+    var template = `${x}`;
+    var template=`<a href="http://localhost/slideshowBackend/slideshow/study2.php?video=${x}">${x}</a>  ${y} <br/>`;
         document.getElementById('output').innerHTML+=template;
   
 }
@@ -58,6 +58,6 @@ function print(x,y='') {
 <html>
 
 <body>
-total: 4
+x
 </body>
 </html>
