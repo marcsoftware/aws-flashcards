@@ -36,7 +36,7 @@ function print(x,y='') {
 function read(x,y='') {
     x=x.trim();
     var template = `${x}`;
-    var template=`<a href="http://localhost/slideshowBackend/slideshow/study2.php?video=${x}">${x}</a>  ${y} <br/>`;
+    var template=`<a href="http://localhost/slideshowBackend/slideshow/card.php?video=${x}">${x}</a>  ${y} <br/>`;
         document.getElementById('output').innerHTML+=template;
   
 }

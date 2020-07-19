@@ -1,0 +1,30 @@
+    body{
+       margin: auto;
+       width:100%;
+       
+
+        
+
+  
+
+    }
+
+    img{
+
+        display: block;
+        border-style: solid;
+        border-width: thin;
+        
+    }
+
+
+
+
+
+
+    #words{
+        color:black;
+        background-color:black ;
+    }
+
+    #words:hover{color:white;}
