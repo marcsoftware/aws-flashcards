@@ -75,5 +75,6 @@ var text = `<?php
 </table>
 
 <input type='button' onclick='prevSlide()' value='<<<<<<<<<<<<<<<<<<'/>
+<input type='button' onclick='nextSlide()' value='>'/>
 </body>
 </html> 

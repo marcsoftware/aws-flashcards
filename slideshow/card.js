@@ -12,6 +12,7 @@ function parse(){
     document.getElementById("output").addEventListener("mousedown", nextSlide); 
     slides=text.split('<br>');
     shuffle(slides);
+    
     total=slides.length-1;
     draw();
    
