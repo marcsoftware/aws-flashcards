@@ -37,12 +37,12 @@ var text = `<?php
                     $count=0;
                     while($row = $result->fetch_assoc()) {
                         $count++;
-                        $id=$count.'-'.$row["id"];
+                        $id=$row["id"];
                         $imageID=$row["imageID"];
                         $task=$row["task"];
 
                         $image="<img src='aws/{$imageID}' />";
-                        echo "<tr> <th > <img id='{$id}'>{$id}</th><th> {$image}</th><th class='small'><textarea onchange='update(\"{$id}\",this)' onpaste='handlePaste(event,\"{$id}\")' > {$task}</textarea><br></tr>";
+                        echo "<tr> <th > <img id='{$id}'>{$id}</th><th> {$image}</th><th class='small'><textarea onchange='update(\"{$id}\",this)' onpaste='handlePaste(event,\"{$id}\")' > {$task}</textarea><br>{$count}</tr>";
                     }
                 } else {
                     echo "0 results";
