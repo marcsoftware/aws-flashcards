@@ -11,7 +11,7 @@ function parse(){
      
     document.getElementById("output").addEventListener("mousedown", nextSlide); 
     slides=text.split('<br>');
-    
+    shuffle(slides);
     total=slides.length-1;
     draw();
    
@@ -54,4 +54,16 @@ function prevSlide(){
     }
     draw();
     document.title=count+'/'+total;
+}
+
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
 }
