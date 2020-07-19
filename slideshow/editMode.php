@@ -34,9 +34,10 @@ var text = `<?php
 
                 if ($result->num_rows > 0) {
                     // output data of each row
-
+                    $count=0;
                     while($row = $result->fetch_assoc()) {
-                        $id=$row["id"];
+                        $count++;
+                        $id=$count.'-'.$row["id"];
                         $imageID=$row["imageID"];
                         $task=$row["task"];
 
