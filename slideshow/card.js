@@ -12,7 +12,7 @@ function parse(){
     document.getElementById("output").addEventListener("mousedown", nextSlide); 
     slides=text.split('<br>');
     shuffle(slides);
-    
+
     total=slides.length-1;
     draw();
    
@@ -27,7 +27,7 @@ function parseHeaders(){
 
 var count=0;
 function draw(){
-
+ console.log(slides[count]);
    output = slides[count].replace(/(.*\.jpg|.*\.gif)/g,`<p class="label">$1<img src="${folder_name}/$1" /></p>`);
 
    output=output.split('|')[0];
@@ -59,6 +59,11 @@ function prevSlide(){
 
 
 function shuffle(a) {
+    var filtered = a.filter(function (el) {
+  return el != null;
+});
+
+    a=filtered;
     var j, x, i;
     for (i = a.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
