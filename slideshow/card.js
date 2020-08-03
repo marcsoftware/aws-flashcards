@@ -11,6 +11,11 @@ function parse(){
      
     document.getElementById("output").addEventListener("mousedown", nextSlide); 
     slides=text.split('<br>');
+     slides = slides.filter(function (el) {
+  return el != null && el.match(/[a-z]/g);
+});
+
+     
     shuffle(slides);
 
     total=slides.length-1;
@@ -41,7 +46,7 @@ function draw(){
 
 function nextSlide(){
     count++;
-    if(count==total){
+    if(count>total){
         alert('you won');
     }
     draw();

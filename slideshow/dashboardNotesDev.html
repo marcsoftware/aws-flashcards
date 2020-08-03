@@ -2,6 +2,13 @@
 <!DOCTYPE html>
 <html>
  <meta charset="UTF-8">
+ <style type="text/css">
+   span{
+    min-width:110px;
+    
+    display: inline-block;
+   }
+ </style>
 <script>
 
     window.onload=init;
@@ -10,35 +17,61 @@
 //
 //--------------------------------------------------------------------------------------
 function init() {
-   print("devnotes01","IAM");
-  print("devnotes02","EC2");
-  print("devnotes03","S3");
 
-document.getElementById('output').innerHTML+='<hr>';
-  read("devnotes01","IAM");
-  read("devnotes02","EC2");
-  read("devnotes03","S3");
+  both("devnotes01","IAM");
+   
+  both("devnotes02","EC2");
+  both("devnotes03","S3");
+  both("devnotes04","serverless");
+  both("devnotes05","dynamodb");
+  both("devnotes06","other");
 
 
+  both("devnotes07"," developer theory");
+  both("devnotes08","advanced IAM ");
+  both("devnotes09","exam tips");
+
+
+
+
+}
+
+//--------------------------------------------------------------------------------------
+// arg y : descprition
+// arg x : name of file
+//--------------------------------------------------------------------------------------
+function both(x,y){
+  read(x,y);
+  print(x,'EDIT');
+  
 }
 
 //--------------------------------------------------------------------------------------
 //
 //--------------------------------------------------------------------------------------
+function echo(x){
+   document.getElementById('output').innerHTML+=x;
+}
+
+//--------------------------------------------------------------------------------------
+// edit mode
+//--------------------------------------------------------------------------------------
 function print(x,y='') {
     x=x.trim();
     var template = `${x}`;
-    var template=`<a href="http://localhost/slideshowBackend/slideshow/editMode.php?video=${x}">${x}</a>  ${y} <br/>`;
+    var template=` <a href="http://localhost/slideshowBackend/slideshow/editMode.php?video=${x}">${y}</a><br/>`;
         document.getElementById('output').innerHTML+=template;
   
 }
 
 
-
+//--------------------------------------------------------------------------------------
+// flashcard mode
+//--------------------------------------------------------------------------------------
 function read(x,y='') {
     x=x.trim();
     var template = `${x}`;
-    var template=`<a href="http://localhost/slideshowBackend/slideshow/card.php?video=${x}">${x}</a>  ${y} <br/>`;
+    var template=`<a href="http://localhost/slideshowBackend/slideshow/card.php?video=${x}">${x}</a> <span> ${y}</span>`;
         document.getElementById('output').innerHTML+=template;
   
 }
@@ -47,13 +80,6 @@ function read(x,y='') {
 <body>
 
 <div id='output'></div>
-
-devnotes04 serverless
-devnotes05 dynamodb
-devnotes06 oher aws servicies
-devnotes07 developer theory
-devnotes08 advanced IAM
-devnotes09 section summary
 
 
 
