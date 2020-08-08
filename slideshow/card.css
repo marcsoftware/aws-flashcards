@@ -14,13 +14,17 @@
         display: block;
         border-style: solid;
         border-width: thin;
+         width:100%;
         
     }
 
 
 
 
-
+        #output{
+            width:50%;
+        }
+       
 
     #words{
         color:black;

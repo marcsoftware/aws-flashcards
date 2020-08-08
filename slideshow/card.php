@@ -29,7 +29,8 @@ var text = `<?php
                 }
 
                 //$sql = "SELECT imageID,task FROM $dbname where video='$video' and task!='' ";
-                $sql = "SELECT imageID,task FROM $dbname where video='$video'  ";
+                //WHERE interests REGEXP 'sports|pub'
+                $sql = "SELECT imageID,task FROM $dbname where video REGEXP '$video'  ";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -66,10 +67,13 @@ var text = `<?php
   <tr>
     <th id='output'></th>
   
-  </tr>
-   <tr>
-    <th id='words'>Company</th>
+ 
   
+    <th>
+
+    <div id='letters'>letters</div>
+    <div id='words'>words</div>
+    </th>
   </tr>
 
 </table>

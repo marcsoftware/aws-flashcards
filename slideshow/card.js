@@ -39,7 +39,13 @@ function draw(){
    output=output.replace(/[\r\n]/g,'');
    parseHeaders();
    var words = slides[count].replace(/(.*\.jpg|.*\.gif)/g,``);
+
+   var letters = words;
+   letters=letters.replace(/\d/g,"#");
+    letters = words.match(/\b[a-zA-Z\#\-\(\)]/g); //get first letter of each word
+   
    document.getElementById('output').innerHTML=output;
+   document.getElementById('letters').innerHTML=letters.join(' ');
    document.getElementById('words').innerHTML=words;
 
 }
