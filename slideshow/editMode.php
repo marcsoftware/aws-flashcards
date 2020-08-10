@@ -29,7 +29,8 @@ var text = `<?php
                 }
 
                 //$sql = "SELECT imageID,task FROM $dbname where video='$video' and task!='' ";
-                $sql = "SELECT id,imageID,task FROM $dbname where video='$video'  ";
+                // $sql = "SELECT imageID,task FROM $dbname where video REGEXP '$video'  ";
+                $sql = "SELECT id,imageID,task FROM $dbname where video REGEXP '$video'  ";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
